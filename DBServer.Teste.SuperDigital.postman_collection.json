@@ -1,0 +1,41 @@
+{
+	"info": {
+		"_postman_id": "2964c87f-4cee-448c-8d68-34a15e37e725",
+		"name": "DBServer.Teste.SuperDigital",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Conta/EfetuaLancamento",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{ \"contaOrigem\": { \"banco\": \"Banco Santander\", \"agencia\": 1020, \"contaNumero\": 123456, \"digito\": 4, \"tipo\": 1, \"saldo\": 2300 }, \"contaDestino\": { \"banco\": \"Banco Santander\", \"agencia\": 1020, \"contaNumero\": 789012, \"digito\": 2, \"tipo\": 1, \"saldo\": 1000 }, \"tipoOpercao\": 1, \"valor\": 250 }"
+				},
+				"url": {
+					"raw": "http://localhost:50001/Conta/EfetuaLancamento",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "50001",
+					"path": [
+						"Conta",
+						"EfetuaLancamento"
+					]
+				},
+				"description": "Exemplo:\n{ \"contaOrigem\": { \"banco\": \"Banco Santander\", \"agencia\": 1020, \"contaNumero\": 123456, \"digito\": 4, \"tipo\": 1, \"saldo\": 2300 }, \"contaDestino\": { \"banco\": \"Banco Santander\", \"agencia\": 1020, \"contaNumero\": 789012, \"digito\": 2, \"tipo\": 1, \"saldo\": 1000 }, \"tipoOpercao\": 1, \"valor\": 250 }"
+			},
+			"response": []
+		}
+	]
+}
